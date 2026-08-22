@@ -2,16 +2,49 @@
 
 **Canonical entry point for the Sealie Federation substrate.**
 
-## Status
+## Gate Status (2026-08-22)
 
-| Layer | Status |
-|-------|--------|
-| Architecture | ESTABLISHED |
-| Execution framework | ESTABLISHED |
-| Evidence architecture | ESTABLISHED |
-| Repository authority (L-01) | IN PROGRESS |
-| Empirical assurance (L-03+) | PENDING |
+| Gate | Status |
+|------|--------|
+| L-01 Repository Authority | **UNBLOCKED** — Public repositories verified |
+| L-02 Runtime Integration | **NEXT** — Interfaces & command contract in progress |
+| L-03 Authority Verification | NOT YET PASSED |
+| L-04 Canonicalization | NOT YET PASSED |
+| L-05 Cryptographic Authority | NOT YET PASSED |
+| L-06 Merkle Evidence | NOT YET PASSED |
+| L-07 Replay Protection | NOT YET PASSED |
 | Public-market readiness | NOT YET PROVEN |
+
+**Invariant:** No green status without machine-generated evidence. Narrative claims are not evidence.
+
+## Sovereign Authority Model
+
+```
+                 RAHMAEL
+          Sovereign Authority Identity
+                     │
+              Governance Layer
+                     │
+              Authority Registry
+                     │
+             ┌───────┴───────┐
+             │               │
+        Key Identity      Role Policy
+             │               │
+       Ed25519 Key ID    SealieGovernor
+             │               │
+             └───────┬───────┘
+                     │
+              Authority Token
+                     │
+                LegionCore
+                     │
+             Command Interlock
+```
+
+- **RAHMAEL-ROOT-001** = governance identity (not a private key)
+- Private keys **never** enter GitHub
+- GitHub holds: public keys, Key IDs, policy digests, fingerprints, revocation state, evidence references
 
 ## Core Repositories
 
@@ -27,22 +60,6 @@
 | [omnis](https://github.com/luciaighotmail-cpu/omnis) | Project OMNIS energy+compute |
 | [sealie-architecture](https://github.com/luciaighotmail-cpu/sealie-architecture) | L-01–L-07 specifications |
 | [sealie-governance](https://github.com/luciaighotmail-cpu/sealie-governance) | Governance & corporate evidence |
-
-## Invariant
-
-No green status without machine-generated evidence.
-
-Narrative claims are not evidence.
-
-## Critical Path
-
-1. L-01 Repository Authority (this substrate)
-2. L-02 Runtime integration
-3. L-03 Authority tests
-4. L-04 Canonicalization torture corpus
-5. L-05 Cryptographic authority
-6. L-06 Merkle evidence
-7. L-07 Replay protection
 
 ## Evidence Planes
 
