@@ -2,20 +2,32 @@
 
 **Canonical entry point for the Sealie Federation substrate.**
 
-## Gate Status (2026-08-22)
+## Gate Status (2026-10-11)
 
 | Gate | Status |
 |------|--------|
-| L-01 Repository Authority | **UNBLOCKED** — Public repositories verified |
-| L-02 Runtime Integration | **NEXT** — Interfaces & command contract in progress |
-| L-03 Authority Verification | NOT YET PASSED |
+| L-01 Repository Authority | **SUPPORTED** — Public repositories verified |
+| L-02 Runtime Integration | **SUPPORTED** — Command contract, state machine, authority registry, nonce, interlock implemented in LegionCore |
+| L-03 Authority Verification (unit-level) | **SUPPORTED** — internal unit-level evidence (see below) |
 | L-04 Canonicalization | NOT YET PASSED |
 | L-05 Cryptographic Authority | NOT YET PASSED |
-| L-06 Merkle Evidence | NOT YET PASSED |
-| L-07 Replay Protection | NOT YET PASSED |
+| L-06 Merkle Evidence | PARTIAL — single domain-separated leaf present; full tree / inclusion proof absent |
+| L-07 Replay Protection | NOT YET PASSED (harness coverage exists; gate not claimed) |
 | Public-market readiness | NOT YET PROVEN |
 
 **Invariant:** No green status without machine-generated evidence. Narrative claims are not evidence.
+
+### L-03 Evidence Reference
+
+| Field | Value |
+|-------|-------|
+| Evidence ID | `L03-EVIDENCE-20261011T073749Z` |
+| Content digest (SHA-256) | `ce7cfc0931b5d6ac228755a502421ca8519e2b061c61827da55eed698a8e36c1` |
+| Evidence commit (legioncore) | `c0ff444c8ca5176fb046c5290d302b5a4121cf64` |
+| Merkle leaf hash | `7204487f301fb128d96f07c9c921ac94d352c3859917346d5906a6290cdd0a23` |
+| Claim | SUPPORTED (internal unit-level only — not PROVEN) |
+
+Independent verification performed 2026-10-11: clean build + 4/4 prescribed tests PASS, digest match.
 
 ## Sovereign Authority Model
 
