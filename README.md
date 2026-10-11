@@ -8,10 +8,10 @@
 |------|--------|
 | L-01 Repository Authority | **SUPPORTED** — Public repositories verified |
 | L-02 Runtime Integration | **SUPPORTED** — Command contract, state machine, authority registry, nonce, interlock implemented in LegionCore |
-| L-03 Authority Verification (unit-level) | **SUPPORTED** — internal unit-level evidence (see below) |
+| L-03 Authority Verification (unit-level) | **SUPPORTED** — internal unit-level evidence |
 | L-04 Canonicalization | NOT YET PASSED |
 | L-05 Cryptographic Authority | NOT YET PASSED |
-| L-06 Merkle Evidence | PARTIAL — single domain-separated leaf present; full tree / inclusion proof absent |
+| L-06 Merkle Evidence | **SUPPORTED** — full tree + inclusion proofs over current L-03 artefacts |
 | L-07 Replay Protection | NOT YET PASSED (harness coverage exists; gate not claimed) |
 | Public-market readiness | NOT YET PROVEN |
 
@@ -24,10 +24,20 @@
 | Evidence ID | `L03-EVIDENCE-20261011T073749Z` |
 | Content digest (SHA-256) | `ce7cfc0931b5d6ac228755a502421ca8519e2b061c61827da55eed698a8e36c1` |
 | Evidence commit (legioncore) | `c0ff444c8ca5176fb046c5290d302b5a4121cf64` |
-| Merkle leaf hash | `7204487f301fb128d96f07c9c921ac94d352c3859917346d5906a6290cdd0a23` |
 | Claim | SUPPORTED (internal unit-level only — not PROVEN) |
 
-Independent verification performed 2026-10-11: clean build + 4/4 prescribed tests PASS, digest match.
+### L-06 Merkle Tree Reference
+
+| Field | Value |
+|-------|-------|
+| Tree ID | `L06-MERKLE-TREE-20261011` |
+| Root (SHA-256) | `88f7474c419c03fd63dbf9b9fdd64a3db549c45d9cf0730e140082ff0397c022` |
+| Leaves | 4 |
+| Depth | 2 |
+| Inclusion proofs | All verified at construction |
+| Claim | SUPPORTED (tree + proofs exist — not PROVEN) |
+
+Independent verification of L-03 performed 2026-10-11. Merkle tree constructed and proofs verified the same day.
 
 ## Sovereign Authority Model
 
