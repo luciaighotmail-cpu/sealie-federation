@@ -73,7 +73,9 @@ Independent verification of L-03 performed 2026-10-11. Merkle tree constructed a
 | Repository | Purpose |
 |------------|---------|
 | [luci](https://github.com/luciaighotmail-cpu/luci) | LUCI / LUCI OMNIS cognitive OS |
+| [luci-prime](https://github.com/luciaighotmail-cpu/luci-prime) | Luci Prime Control Desk (Tower / Luci / Nodes / Ledger / Vault / Orders) — MODEL |
 | [legioncore](https://github.com/luciaighotmail-cpu/legioncore) | LegionCore distributed substrate |
+| [sealie-digital-twin](https://github.com/luciaighotmail-cpu/sealie-digital-twin) | Digital Twin R01 (OMNIS) — synthetic service + observer — MODEL |
 | [sealie-os](https://github.com/luciaighotmail-cpu/sealie-os) | Sealie.OS for Lumina nodes |
 | [lvx-900](https://github.com/luciaighotmail-cpu/lvx-900) | LVX-900 symbiotic terminal |
 | [evidence-ledger](https://github.com/luciaighotmail-cpu/evidence-ledger) | Merkle evidence system |
